@@ -17,7 +17,7 @@ module.exports.checkConfig = async () => {
   }
 
   const config = await inquirer.prompt(Parameters.configQuestions);
-  await writeFileAsync("./snapshot.config.json", JSON.stringify(config, null, 2));
+  await writeFileAsync("./src/snapshot.config.json", JSON.stringify(config, null, 2));
   console.info("Configuration file was successfully created. Please run the program again.");
   process.exit();
 };
